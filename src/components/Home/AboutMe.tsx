@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: '400',
+});
 
 const AboutMe = () => {
 
@@ -12,36 +18,42 @@ const AboutMe = () => {
   ]
 
   return (
-    <main>
-        <div>
-            <h1>Prazer, sou &nbsp;</h1>
-            <span>Jeziel</span>
-            <div>
-              <h2>
+    <main className='flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32 py-8 text-lg text-center xl:text-left xl:flex-nowrap xl:justify-between'>
+        <div className='text-white flex flex-col items-center xl:items-start gap-4 w-full xl:w-120'>
+            <h1 className='text-3xl sm:text-7xl xl:leading-[5rem]'>Prazer, sou&nbsp;
+              <span className='font-bold'>Jeziel</span>
+            </h1>
+            <div className='mb-12'>
+              <h2 className={`${roboto.className} mb-12`}>
                 Sou desenvolvedor Front-end que busca cada dia mais novos conhecimentos e aprimoramento!
               </h2>
-              <Link href="/contatos">Converse comigo!</Link>
+              <Link href="/contatos" className='bg-jz-gray-500 p-3 w-fit text-xl rounded-lg transition-all hover:bg-opacity-80'>
+                Converse comigo!
+              </Link>
             </div>
-            <ul>
+            <ul className='flex flex-wrap justify-center xl:grid xl:grid-cols-2 xl:w-fit gap-3 text-xl'>
               {TECNOLOGIAS.map((tec, index) => (
-                <li key={index} style={{backgroundColor: tec.corDeFundo, color: tec.cor}} >{tec.nome}</li>
+                <li 
+                  key={index} 
+                  style={{backgroundColor: tec.corDeFundo, color: tec.cor}} 
+                  className='w-fit p-2 rounded-md'
+                >
+                  {tec.nome}
+                </li>
               ))}
-              {/* <li style={{backgroundColor: '#2f74c0', color: 'white'}}>typescript</li>
-              <li style={{backgroundColor: '#6bddfa', color: 'black'}}>react</li>
-              <li style={{backgroundColor: '#efd81d', color: 'black'}}>javascript</li>
-              <li style={{backgroundColor: 'black', color: 'white'}}>next.js</li> */}
             </ul>
         </div>
-        <div>
+        <div className='relative'>
           <Image 
             src="https://avatars.githubusercontent.com/u/82993547?v=4" 
             alt="Imagem de perfil" 
             unoptimized
             width={500}
             height={500}
+            className='rounded-full'
           />
-          <p>
-            <span>3+</span>
+          <p className='p-4 w-fit text-base leading-tight bg-jz-blue-500 rounded-xl text-black absolute -bottom-3 sm:-bottom-3'>
+            <span className='text-4xl'>3+</span>
             <br/>
             anos de experiência
           </p>

@@ -1,6 +1,5 @@
 import AboutMe from "@/components/Home/AboutMe"
 import Head from "next/head"
-import Link from "next/link"
 import React from "react"
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
           content="Sou desenvolvedor Front-end que busca cada dia mais novos conhecimentos e aprimoramento!"
         />
       </Head>
-      <div>
+      <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe />
       </div>
     </React.Fragment>

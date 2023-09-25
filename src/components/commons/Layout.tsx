@@ -1,15 +1,10 @@
 import React, { ReactNode } from 'react'
 import Header from './Header';
-import { JetBrains_Mono } from 'next/font/google';
+import jetbrains_mono from '../fonts/JetbrainsMono';
 
 interface LayoutProps {
     children: ReactNode;
 }
-
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: '400'
-});
 
 const Layout = ({ children }: LayoutProps) => {
   return (
