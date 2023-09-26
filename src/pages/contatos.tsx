@@ -1,5 +1,5 @@
+import CopyButton from '@/components/commons/CopyButton'
 import Head from 'next/head'
-import Link from 'next/link'
 import React from 'react'
 
 const Contatos = () => {
@@ -23,6 +23,7 @@ const Contatos = () => {
                 <span className='font-bold'>{cont.contato}</span>
                 <div className='flex gap-1 md:gap-3 items-center'>
                   <a href={cont.url} className='text-sm md:text-lg text-slate-300 underline truncate'>{cont.titulo}</a>
+                  <CopyButton textToCopy={cont.titulo} />
                 </div>
               </li>
             ))}
