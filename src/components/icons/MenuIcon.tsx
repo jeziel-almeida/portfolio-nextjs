@@ -4,7 +4,7 @@ const MenuIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <svg
             {...props}
-            stroke-width="0"
+            strokeWidth="0"
             viewBox='0 0 24 24'
             height="1rem"
             width="1rem"
