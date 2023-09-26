@@ -11,7 +11,6 @@ const Layout = ({ children }: LayoutProps) => {
     <div className={jetbrains_mono.className}>
         <Header />
         {children}
-        <div>Footer</div>
     </div>
   )
 }

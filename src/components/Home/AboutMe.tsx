@@ -21,7 +21,7 @@ const AboutMe = () => {
     <main className='flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32 py-8 text-lg text-center xl:text-left xl:flex-nowrap xl:justify-between'>
         <div className='text-white flex flex-col items-center xl:items-start gap-4 w-full xl:w-120'>
             <h1 className='text-3xl sm:text-7xl xl:leading-[5rem]'>Prazer, sou&nbsp;
-              <span className='font-bold'>Jeziel</span>
+              <strong className='font-bold'>Jeziel</strong>
             </h1>
             <div className='mb-12'>
               <h2 className={`${roboto.className} mb-12`}>
@@ -53,7 +53,7 @@ const AboutMe = () => {
             className='rounded-full'
           />
           <p className='p-4 w-fit text-base leading-tight bg-jz-blue-500 rounded-xl text-black absolute -bottom-3 sm:-bottom-3'>
-            <span className='text-4xl'>3+</span>
+            <strong className='text-4xl'>3+</strong>
             <br/>
             anos de experiência
           </p>
