@@ -11,3 +11,11 @@ Site: https://jeziel-portfolio.vercel.app/
 ![Imagem do Projetos recentes](./public/projetos-recentes.png)
 
 ![Imagem da Página de contatos](./public/pagina-contatos.png)
+
+## Tests:
+
+> npm install --save-dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom -D
+
+> npm install @types/jest -D
+
+> [Optional] npm install @types/testing-library__jest-dom -D
