@@ -46,7 +46,7 @@ const AboutMe = () => {
         <div className='relative'>
           <Image 
             src="https://avatars.githubusercontent.com/u/82993547?v=4" 
-            alt="Imagem de perfil" 
+            alt="Imagem de perfil do portfolio" 
             unoptimized
             width={500}
             height={500}
