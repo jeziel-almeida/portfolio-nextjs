@@ -28,3 +28,4 @@ describe('<AboutMe />', () => {
         expect(heading).toBeInTheDocument();
     })
 })
+
