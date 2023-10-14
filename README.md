@@ -19,3 +19,16 @@ Site: https://jeziel-portfolio.vercel.app/
 > npm install @types/jest -D
 
 > [Optional] npm install @types/testing-library__jest-dom -D
+
+Configurar package.json:
+
+```json
+{
+  "scripts": {
+      ...
+      "test": "jest",
+      "watch": "jest --watch",
+      "updateSnapshot": "jest --updateSnapshot",
+      "coverage": "jest --coverage"
+}
+```
