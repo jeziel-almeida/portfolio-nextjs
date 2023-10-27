@@ -30,7 +30,9 @@ export default function Home({ home }: HomeProps) {
       </Head>
       <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe aboutMe={aboutMe} />
-        <Projects projects={projects} />
+        <div id="projetos">
+          <Projects projects={projects} />
+        </div>
       </div>
     </>
   )
