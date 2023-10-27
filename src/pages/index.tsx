@@ -20,7 +20,7 @@ export default function Home({ home }: HomeProps) {
   console.log(home);
 
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>Sobre mim | Jeziel</title>
         <meta 
@@ -32,7 +32,7 @@ export default function Home({ home }: HomeProps) {
         <AboutMe aboutMe={aboutMe} />
         <Projects projects={projects} />
       </div>
-    </React.Fragment>
+    </>
   )
 }
 
