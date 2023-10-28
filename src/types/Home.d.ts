@@ -32,5 +32,10 @@ export interface AboutMe {
 export interface Project {
     slug: string;
     name: string;
+    stack: string;
     image: Image;
+    techs: string[];
+    description: string;
+    repository: string;
+    deployment?: string;
 }

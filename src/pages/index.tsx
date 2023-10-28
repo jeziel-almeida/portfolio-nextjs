@@ -17,8 +17,6 @@ export default function Home({ home }: HomeProps) {
   
   const { aboutMe, projects } = home;
 
-  console.log(home);
-
   return (
     <>
       <Head>
