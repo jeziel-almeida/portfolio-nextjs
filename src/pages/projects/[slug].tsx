@@ -26,7 +26,12 @@ export default function Page({ home }: ProjectsProps) {
             <Link href={'/#projetos'} className='absolute -top-14  md:-top-20 md:left-16'>
                 <GoBackIcon />
             </Link>
-            <Image src={project.image.url} width={500} height={500} alt='' />
+
+            <div className='relative mb-8 xl:mb-0'>
+                <Image src={project.image.url} width={500} height={500} alt='Project screenshot' />
+                <span className={`absolute -bottom-4 left-1/2 -translate-x-1/2 p-1 text-sm rounded-lg text-white ${project.stack === 'front-end' ? 'bg-blue-600': project.stack === 'back-end' ? 'bg-green-600' : 'bg-yellow-600'}`}>{project.stack}</span>
+            </div>
+
             <div className='text-center w-full md:w-[600px] flex flex-col gap-6'>
                 <h2 className='text-xl sm:text-4xl'>{project.name}</h2>
                 <div className='flex justify-center items-center flex-wrap gap-4 md:gap-6 text-sm md:text-base' style={{ color: '#6BDDFA' }}>
@@ -34,7 +39,8 @@ export default function Page({ home }: ProjectsProps) {
                         <p key={tech + idx}>{tech}</p>
                     ))}
                 </div>
-                <p>{project.description}</p>
+                <p className='text-sm md:text-xl'>{project.description}</p>
+                <div className='w-full h-[1px] bg-slate-500'></div>
                 <div>
                     <p>Repositório: <a className='text-sm md:text-lg text-slate-300 underline' href={project.repository} target='_blank'>{project.repository}</a></p>
                     {project.deployment && <p>Deployment: <a className='text-sm md:text-lg text-slate-300 underline' href={project.deployment} target='_blank'>{project.deployment}</a></p>}
