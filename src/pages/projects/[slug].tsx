@@ -1,15 +1,12 @@
 import GoBackIcon from '@/components/icons/GoBackIcon';
 import { loadHome } from '@/service/LoadHome';
-import { Project, AboutMe as TAboutMe } from '@/types/Home';
+import { Home, Project, AboutMe as TAboutMe } from '@/types/Home';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 
 interface ProjectsProps {
-    home: {
-        aboutMe: TAboutMe;
-        projects: Project[];
-    }
+    home: Home;
 }
 
 export default function Page({ home }: ProjectsProps) {
@@ -23,12 +20,14 @@ export default function Page({ home }: ProjectsProps) {
 
     return (
         <div className='flex flex-col gap-6 xl:flex-row justify-center items-center w-full mt-16  md:mt-28 p-4 md:p-4 relative'>
-            <Link href={'/#projetos'} className='absolute -top-14  md:-top-20 md:left-16'>
+            <Link href={'/#projects'} className='absolute -top-14  md:-top-20 md:left-16'>
                 <GoBackIcon />
             </Link>
 
             <div className='relative mb-8 xl:mb-0'>
-                <Image src={project.image.url} width={500} height={500} alt='Project screenshot' />
+                <a href={project.deployment ? `${project.deployment}` : `${project.repository}`} target='_blank'>
+                    <Image src={project.image.url} width={500} height={500} alt='Project screenshot' />
+                </a>
                 <span className={`absolute -bottom-4 left-1/2 -translate-x-1/2 p-1 text-sm rounded-lg text-white ${project.stack === 'front-end' ? 'bg-blue-600': project.stack === 'back-end' ? 'bg-green-600' : 'bg-yellow-600'}`}>{project.stack}</span>
             </div>
 

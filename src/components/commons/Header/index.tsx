@@ -27,7 +27,7 @@ const Header = () => {
             </button>
             <nav className='hidden md:flex items-center gap-10 text-lg'>
                 <Link href="/">Sobre mim</Link>
-                <Link href="/projects">Portfolio</Link>
+                <Link href="/#projects">Portfolio</Link>
                 <Link href="/contatos">Entre em contato</Link>
             </nav>
             <Menu isVisible={isMenuOpen} onClose={closeMenu} />

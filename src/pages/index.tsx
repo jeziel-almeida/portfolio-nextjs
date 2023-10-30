@@ -24,7 +24,7 @@ export default function Home({ home }: HomeProps) {
       </Head>
       <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe aboutMe={aboutMe} />
-        <div id="projetos">
+        <div id="projects">
           <Projects projects={projects} />
         </div>
       </div>
