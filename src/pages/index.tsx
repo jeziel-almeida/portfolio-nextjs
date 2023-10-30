@@ -1,20 +1,16 @@
 import AboutMe from "@/components/Home/AboutMe"
 import Projects from "@/components/Home/Projects"
 import { loadHome } from "@/service/LoadHome"
-import { Project, AboutMe as TAboutMe } from "@/types/Home"
+import { Home } from "@/types/Home"
 import { GetStaticProps } from "next"
 import Head from "next/head"
-import React from "react"
 
 interface HomeProps {
-  home: {
-    aboutMe: TAboutMe;
-    projects: Project[];
-  }
+  home: Home
 }
 
 export default function Home({ home }: HomeProps) {
-  
+
   const { aboutMe, projects } = home;
 
   return (

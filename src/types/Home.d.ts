@@ -39,3 +39,8 @@ export interface Project {
     repository: string;
     deployment?: string;
 }
+
+export interface Home {
+    aboutMe: AboutMe;
+    projects: Project[];
+}
